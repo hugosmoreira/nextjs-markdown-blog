@@ -3,8 +3,8 @@ import path from 'path'
 import matter from 'gray-matter'
 import marked from 'marked'
 import Link from 'next/link'
-import Layout from '@/components/Layout'
-import CategoryLabel from '@/components/CategoryLabel'
+import Layout from '../../components/Layout'
+import CategoryLabel from '../../components/CategoryLabel'
 
 export default function PostPage({
   frontmatter: { title, category, date, cover_image, author, author_image },
@@ -34,7 +34,7 @@ export default function PostPage({
         </div>
 
         <div className='blog-text mt-2'>
-          <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+          <div dangerouslySetInnerHTML={{ __html: marked }}></div>
         </div>
       </div>
     </Layout>
